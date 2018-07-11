@@ -1,0 +1,10 @@
+.categorybody {
+	text-align: center;
+	background: $platinum;
+	&-text {
+		margin: 0 auto;
+		width: 80%;
+		padding: 3% 0;
+		color: $deepblue;
+	}
+}

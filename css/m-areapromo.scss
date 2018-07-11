@@ -1,0 +1,84 @@
+.areapromo {
+	display: flex;
+	flex-direction: column;
+	flex-wrap: wrap;
+	@include breakpoint(lg) {
+		flex-direction: row;
+	}
+	&-areahighlight {
+		display: flex;
+		flex-direction: column;
+		width: 100%;
+		@include breakpoint(lg) {
+			flex-direction: row;
+		}
+		&-image {
+			// flex-basis: 50%;
+			margin: 0;
+			&__centroma {
+				flex-basis: 50%;
+				margin: 0;
+				height: 50vw;
+				max-width: 100%;
+				background-image: url('../img/adventure/adv_area_cent.jpg');
+				background-size: cover;
+				@include breakpoint(lg) {
+					height: 20vw;
+				}
+			}
+			&__naflionne {
+				flex-basis: 50%;
+				margin: 0;
+				height: 50vw;
+				background-image: url('../img/adventure/adv_area_naf.jpg');
+				background-size: cover;
+				@include breakpoint(lg) {
+					height: 20vw;
+				}
+			}
+		}
+		&-textblock {
+			display: flex;
+			flex-direction: column;
+			flex-basis: 50%;
+			justify-content: center;
+			background: $platinum;
+			&-title {
+				margin: 0 3%;
+				color: $deepblue;
+				font-size: 2rem;
+			}
+			&-description {
+				color: $deepblue;
+				margin-left: 3%;
+			}
+		}
+	}
+	&-event {
+		display: flex;
+		flex-basis: 50%;
+		flex-direction: row;
+		justify-content: center;
+		margin-top: 3%;
+		margin-bottom: 5%;
+		@include breakpoint(lg) {
+			flex-direction: row;
+		}
+		&-image {
+			&__foodfest {
+				background-image: url('../img/adventure/adv_hero_3.png');
+				background-size: cover;
+				background-repeat: no-repeat;
+				height: 10vw;
+				flex-basis: 10%;
+				border-radius: 50%;
+				@include breakpoint(lg) {
+					flex-basis: 20%;
+				}
+				}
+			&__balloontour {
+
+			}
+		}
+	}
+}

@@ -1,0 +1,67 @@
+.hero {
+    margin: 0;
+	display:inline-block;
+	text-align: center;
+	&--container {
+		position: relative;
+		text-align: center;
+		color: $platinum;
+	}
+	&--image {
+		width: 100vw;
+		height: 66.65vw;
+		background-image: 
+    		linear-gradient(
+      		rgba(0, 0, 0, 0.5),
+      		rgba(0, 0, 0, 0.5)
+    		),
+    		url('../img/hero/hero_2.jpg');
+    	background-size: contain;
+    	background-repeat: no-repeat;
+	}	
+	&--title {
+		position: absolute;
+   		top: 30%;
+    	left: 50%;
+    	transform: translate(-50%, -50%);
+    	font-size: 2.5rem;
+    	width: 100%;
+    	letter-spacing: .2rem;
+    	border-bottom: 3px solid $burntorange;
+    	@include breakpoint(lg) {
+    		top: 30%;
+    		left: 50%;
+    		font-size: 5rem;
+    		letter-spacing: .5rem;
+    	}
+	}
+	&--catchphrase {
+		position: absolute;
+   		top: 52%;
+    	left: 50%;
+    	transform: translate(-50%, -50%);
+    	font-size: 1.5rem;
+    	width: 100%;
+    	margin-top: 1%;
+    	font-style: italic;
+    	@include breakpoint(lg) {
+    		top: 50%;
+    		left: 50%;
+    		font-size: 3rem;
+    		margin-top: 1.3%;
+    	}
+	}
+	.fa-angle-double-down {
+		display:inline-block;
+        position: absolute;
+        top: 85%;
+        left: 47%;
+		z-index: 100;
+		color: $burntorange;
+		font-size: 6rem;
+		text-align: center;
+        @include breakpoint(lg) {
+            left: 48%;
+        }
+        }
+}

@@ -1,0 +1,136 @@
+body {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.nav-menu {
+  padding-top: 12%;
+  line-height: 4rem;
+  @include breakpoint(lg) {
+    padding-top: 5%;
+    line-height: 3rem;
+  }
+  &--panel {
+    display: flex;
+    flex-direction: row;
+    background: $deepblue;
+  }
+  &--sitetitle {
+    font-weight: normal;
+    color: $platinum;
+    margin:1%;
+    padding-left: 3%;
+    font-size: 3.5rem;
+    margin-left: 2%;
+    margin-bottom: 0;
+    @include breakpoint(lg) {
+      font-size: 2rem;
+    }
+  }
+  &--sitesubtitle {
+    color: $platinum;
+    margin: 0;
+    margin-top: -4%;
+    margin-bottom: 2%;
+    padding: 0;
+    margin-left: 10%;
+    letter-spacing: .6rem;
+    font-size: 1rem;
+    font-weight: normal;
+    @include breakpoint(lg) {
+      letter-spacing: .15rem;
+      font-size: 1rem;
+      margin-left: 8%;
+    }
+  }
+  &--sitelogo {
+    margin-left: 1%;
+    a {
+      text-decoration: none;
+      }
+  }
+  &--togglemenu {
+    color: $platinum;
+    margin-left: 2%;
+    margin-top: 0;
+    font-size: 3.5rem;
+    padding-bottom: 1.5%;
+    border: none;
+    background: $deepblue;
+    @include breakpoint(lg) {
+      font-size: 2rem;
+      padding-bottom: .2%;
+    }
+  }
+  &-option {
+    display: inline-block;
+    padding-left: 10%;
+    font-size: 2rem;
+    text-decoration: none;
+    color: $platinum;
+    border-bottom: 1px solid $burntorange;
+    @include breakpoint(lg) {
+      padding-left: 10%;
+      font-size: 2rem;
+    }
+  }
+}
+
+// Slideout Essentials
+.slideout-menu {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  width: 256px;
+  min-height: 100vh;
+  overflow-y: scroll;
+  -webkit-overflow-scrolling: touch;
+  z-index: 0;
+  display: none;
+  background-color: $deepblue;
+}
+
+.slideout-menu-left {
+  left: 0;
+}
+
+.slideout-menu-right {
+  right: 0;
+}
+
+.slideout-panel {
+  position: relative;
+  z-index: 1;
+  will-change: transform;
+  background-color: white; /* A background-color is required */
+  min-height: 100vh;
+}
+
+.slideout-open,
+.slideout-open body,
+.slideout-open .slideout-panel {
+  overflow: hidden;
+}
+
+.slideout-open .slideout-menu {
+  display: block;
+}
+
+.panel:before {
+  content: '';
+  display: block;
+  background-color: rgba(0,0,0,0);
+  transition: background-color 0.5s ease-in-out;
+}
+
+.panel-open:before {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: rgba(0,0,0,.5);
+  z-index: 99;
+}

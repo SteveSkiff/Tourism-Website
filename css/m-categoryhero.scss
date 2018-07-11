@@ -1,0 +1,11 @@
+.categoryhero {
+	background: url(../img/adventure/adventure_pagehero_1.png) no-repeat center;
+    background-size: cover;
+	&-title {
+		font-size: 3.5rem;
+		color: $platinum;
+		letter-spacing: .5rem;
+		margin-left: 1%;
+		padding: 2%;
+	}
+}

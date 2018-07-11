@@ -1,0 +1,117 @@
+.footer {
+	&-newsletter {
+		display: flex;
+		align-items: center;
+		flex-direction: column;
+		justify-content: center;
+		background: $platinum;
+		padding: 3%;
+		@include breakpoint(lg) {
+			display: flex;
+			align-items: center;
+			flex-direction: row;
+			justify-content: center;
+			background: $platinum;
+			padding: 3%;
+		}
+		&--cta {
+			font-size: 1.5rem;
+			margin-top: 0;
+			margin-bottom: 5%;
+			@include breakpoint(lg) {
+				margin-right: 25%;
+				font-size: 1.5rem;
+				margin-bottom: 0;
+			}
+		}
+		&--textinput {
+			resize:none;
+			width: 50%;
+			height: 1.94rem;
+			font-size: 1.4rem;
+			vertical-align: middle;
+			margin-bottom: 2%;
+			@include breakpoint(lg) {
+				resize:none;
+				width: 25%;
+				height: 1.94rem;
+				font-size: 1.4rem;
+				margin-right: 1.5%;
+				vertical-align: middle;
+				margin-bottom: 0;
+			}
+		}
+		&--signupbtn {
+			width: 10%;
+			background: $burntorange;
+			color: $platinum;
+			font-size: 1.2rem;
+			border: none;
+			padding: 2%;
+			width: 25%;
+			@include breakpoint(lg) {
+				width: 10%;
+				background: $burntorange;
+				color: $platinum;
+				font-size: 1.2rem;
+				border: none;
+				padding: .6%;
+			}
+		}
+	}
+
+	&-legalsocial {
+		display: flex;
+		flex-direction: row;
+		justify-content: space-around;
+		align-items: center;
+		color: $platinum;
+		background: $deepblue;
+		&-legal {
+			display: flex;
+			flex-direction: column;
+			margin-right: 0;
+			margin: 2% 0;
+			@include breakpoint(lg) {
+				flex-direction: row;
+				font-size: .8rem;
+				flex-shrink: 0;
+			}
+			&--contact, &--terms, &--privacy {
+				color: $platinum;
+				@include breakpoint(lg) {
+					margin-left: 7px;
+				}
+			}
+		}
+		&--copyright {
+			color: grey;
+			@include breakpoint(lg) {
+				margin-left: 15%;
+				margin-right: 30%;
+				color: grey;
+				flex-shrink: 0;
+			}
+		}
+		&-social {
+			@include breakpoint(lg) {
+				margin-left: 0;
+				flex-shrink: 0;
+			}
+		}
+
+	}
+}
+
+.fa-envelope {
+	font-size: 5rem;
+	color: $burntorange;
+	@include breakpoint(lg) {
+		padding-right: 40%;
+	}
+}
+.fa-facebook, .fa-google-plus-square, .fa-twitter-square, .fa-youtube-square {
+	font-size: 2.5rem;
+	color: $platinum;
+}
+
