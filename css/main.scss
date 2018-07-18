@@ -22,6 +22,10 @@ $burntorange: #7D301A;
 
 @import "m-footer.scss";
 
+// CONTACT US FORM
+
+@import 'contactform.scss';
+
 // ADVENTURE
 
 @import 'm-categoryhero.scss';
@@ -32,7 +36,24 @@ $burntorange: #7D301A;
 
 @import 'm-areapromo.scss';
 
-@import 'm-areaeventlist.scss'
+@import 'm-areaeventlist.scss';
 
+// PLAN
+
+@import 'plan_accordion.scss';
+
+@import 'plan_contactus.scss';
+
+@import 'plan_header.scss';
+
+// COMMUNITY
+
+@import 'community_articleitem.scss';
+
+@import 'community_filter.scss';
+
+// EXPLORE
+
+@import 'explore_map.scss';
 
 

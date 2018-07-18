@@ -1,0 +1,22 @@
+.contactus {
+	background: $platinum;
+	display:flex;
+	flex-direction: column;
+	width: 50%;
+	align-items: center;
+	margin: 3% auto;
+	@include breakpoint(lg) {
+		width: 30%;
+	}
+	&-questions {
+		color: $deepblue;
+		font-size: 1.1rem;
+	}
+	&-link {
+		color: $burntorange;
+		margin-bottom: 3vh;
+		@include breakpoint(lg) {
+			margin-bottom: 3vh;
+		}
+	}
+}

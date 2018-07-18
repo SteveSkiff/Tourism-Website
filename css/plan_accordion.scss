@@ -1,0 +1,40 @@
+.faq {
+	margin-top: 2%;
+	&-accordionbtn {
+		display: block;
+		width: 80%;
+		margin: 0 auto;
+		background: $platinum;
+		color: $deepblue;
+		font-size: 1.2rem;
+		border: none;
+		text-align: left;
+		padding: 3%;
+		@include breakpoint(lg) {
+			padding: 1%;
+			width: 70%;
+		}
+		i {
+			color: $burntorange;
+			float: right;
+		}
+	}
+	&-answertext {
+		transition: ease-in-out;
+		width: 75%;
+		margin: 1% auto;
+		color: $deepblue;
+		@include breakpoint(lg)	{
+			width: 65%;
+		}	
+		&-link {
+			color: $burntorange;
+		}
+	}
+}
+
+.js__opened {
+	background: $deepblue;
+	color: $platinum;
+}
+

@@ -1,0 +1,30 @@
+.sectionheader {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	margin-bottom: 5%;
+	margin-top: 5%;
+	@include breakpoint(lg) {
+		margin-bottom: 1%;
+		margin-top: 3%;
+	}
+	&-header {
+		color: $deepblue;
+		padding-left:12%;
+		margin: 0;
+		font-size: 1.5rem;
+		@include breakpoint(lg) {
+			padding-left: 16%;
+			font-size: 2rem;
+		}
+	}
+	.fa-plane, .fa-money-bill, .fa-bus {
+		color: $burntorange;
+		padding-right: 12%;
+		font-size: 1.5rem;
+		// padding-top:3.5%;
+		@include breakpoint(lg) {
+			padding-right: 16%;
+		}
+	}
+}

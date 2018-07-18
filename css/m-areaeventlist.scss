@@ -1,0 +1,36 @@
+.events {
+	display: flex;
+	flex-direction: column;
+	margin-left: 8%;
+	@include breakpoint(lg) {
+		flex-direction: row;
+		justify-content: space-evenly;
+		flex-basis: 50%;
+		margin-left: 0;
+		margin-top: 3%;
+		margin-bottom: 3%;
+	}
+	&-weeklyevents {
+		display: flex;
+		flex-direction: column;
+		&-area {
+			font-size: 1.3rem;
+			color: $deepblue;
+			margin-top: 3%;
+			font-weight: bold;
+			&-eventlist {
+				margin: 0;
+				&-item {
+					a {
+						color: $burntorange;
+					}
+					&-date {
+						font-style: italic;
+						color: $deepblue;
+						font-size: .9rem;
+					}
+				}
+			}
+		}
+	}
+}

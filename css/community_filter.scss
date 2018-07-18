@@ -1,0 +1,21 @@
+.filter {
+	display:flex;
+	justify-content: space-around;
+	margin: 3%;
+	&-container {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		&-item {
+			background: $platinum;
+			padding: 2% 5%;
+			&__selected {
+			background: $burntorange;
+			color: $platinum;
+			}
+			input {
+			display: none;
+			}
+		}
+	}
+}

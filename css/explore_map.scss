@@ -1,0 +1,79 @@
+#map {
+	height: 600px;
+	width: 80vw;
+}
+
+.mapandlist {
+	display: flex;
+	.list {
+		display: flex;
+		flex-direction: column;
+		background: $deepblue;
+		width: 60%;
+		height: 600px;
+		overflow: scroll;
+		// .js__active {
+		// 	background: $deepblue;
+		// 	p {
+		// 	color: $platinum;
+		// 	}
+		// }
+		@include breakpoint(lg) {
+			width: 40%;
+		}
+		&-eventitem {
+			text-decoration: none;
+			padding-left: 2%;
+			background: $platinum;
+			border-bottom: 1px solid black;
+			border-top: 1px solid black;
+			&-title {
+				color: $burntorange;
+				font-size: 1.2rem;
+				font-weight: bold;
+				margin: 2%;
+				margin-left: 4%;
+				text-decoration: underline;
+				@include breakpoint(lg) {
+					font-size: 1.5rem;
+				}
+			}
+			&-date {
+				color: grey;
+				margin: 0;
+				margin-left: 4%;
+				margin-top: 1%;
+				margin-bottom: 3%;
+			}
+			&-desc {
+				font-size: .9rem;
+				margin: 2%;
+				margin-left: 4%;
+				color: $deepblue;
+				@include breakpoint(lg) {
+					font-size: 1rem;
+				}
+			}
+		}
+		&-eventitem:hover {
+			transition: 0.2s ease;
+			background: $deepblue;
+			p {
+				color: $platinum;
+			}
+		}
+	}
+	.js__active {
+			background: $deepblue;
+			p {
+			color: $platinum;
+			}
+		}
+}
+
+
+.leaflet-popup-tip,
+.leaflet-popup-content-wrapper {
+    background: $burntorange;
+    color: $platinum;
+}

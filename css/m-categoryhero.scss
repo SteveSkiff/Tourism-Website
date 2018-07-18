@@ -1,11 +1,44 @@
 .categoryhero {
-	background: url(../img/adventure/adventure_pagehero_1.png) no-repeat center;
-    background-size: cover;
+	&__adventure {
+		background-image:linear-gradient(to right,
+      rgba(0, 0, 0, 0.8),
+      rgba(0, 0, 0, 0.0)
+    ), url(../img/adventure/adventure_pagehero_1.png);
+		background-size: cover;
+	}
+	&__plan {
+		background-image:linear-gradient(to right,
+      	rgba(0, 0, 0, 0.8),
+      	rgba(0, 0, 0, 0.0)
+    	), url(../img/plan/plan_pagehero_1.png);
+		background-size: cover;
+	}
+	&__community {
+		background-image:linear-gradient(to right,
+      	rgba(0, 0, 0, 0.8),
+      	rgba(0, 0, 0, 0.0)
+    	), url(../img/community/community_pagehero_1.png);
+		background-size: cover;
+	}
+	&__explore {
+		background-image:linear-gradient(to right,
+      	rgba(0, 0, 0, 0.8),
+      	rgba(0, 0, 0, 0.0)
+    	), url(../img/explore/explore_pagehero_1.png);
+		background-size: cover;
+	}
+	&__contactus {
+		background-image:linear-gradient(to right,
+      	rgba(0, 0, 0, 0.8),
+      	rgba(0, 0, 0, 0.0)
+    	), url(../img/contactus/contactus_pagehero_1.png);
+		background-size: cover;
+	}
 	&-title {
 		font-size: 3.5rem;
 		color: $platinum;
 		letter-spacing: .5rem;
 		margin-left: 1%;
-		padding: 2%;
+		padding: 3%;
 	}
 }

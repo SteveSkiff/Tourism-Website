@@ -1,0 +1,7 @@
+.article {
+  display: flex; }
+  .article-img {
+    height: 50vw;
+    width: 300px;
+    background-image: url("../img/community/community_articleimg.png");
+    background-size: cover; }
