@@ -45,16 +45,27 @@
 			flex-basis: 50%;
 			justify-content: center;
 			background: $platinum;
+			padding: 5% 0;
+			@include breakpoint(lg) {
+				padding: 2% 0;
+			}
 			&-title {
 				margin: 0 5%;
 				margin-top: 2%;
 				color: $deepblue;
-				font-size: 2rem;
+				font-size: 4.5rem;
+				@include breakpoint(lg) {
+					font-size: 3rem;
+				}
 			}
 			&-description {
 				color: $deepblue;
 				margin-left: 5%;
 				width: 90%;
+				font-size: 3rem;
+				@include breakpoint(lg) {
+					font-size: 1.5rem;
+				}
 			}
 		}
 	}
@@ -63,63 +74,74 @@
 		flex-basis: 50%;
 		flex-direction: row;
 		justify-content: center;
-		margin-bottom: 5%;
+		margin: 10% 0;
+		margin-left: 3%;
 		@include breakpoint(lg) {
+			align-items: center;
 			flex-direction: row;
 			flex-basis: 50%;
-			justify-content: center;
+			justify-content: flex-end;
+			margin: 2% 0;
 		}
 		&-image {
 			&__foodfest {
 				background-image: url('../img/adventure/adventure_event_foodfest.png');
 				background-size: cover;
 				background-repeat: no-repeat;
-				height: 10vw;
-				min-height: 80px;
-				min-width: 80px;
-				flex-basis: 10%;
+				height: 20vw;
+				min-height: 100px;
+				min-width: 100px;
+				flex-basis: 20%;
 				border-radius: 50%;
+				align-self: center;
 				@include breakpoint(lg) {
 					flex-basis: 20%;
+					height: 10vw;
 				}
 			}
 			&__balloontour {
 				background-image: url('../img/adventure/adventure_event_balloon.png');
 				background-size: cover;
 				background-repeat: no-repeat;
-				height: 10vw;
+				height: 20vw;
 				min-height: 80px;
 				min-width: 80px;
-				flex-basis: 10%;
+				flex-basis: 20%;
 				border-radius: 50%;
+				align-self: center;
 				@include breakpoint(lg) {
 					flex-basis: 20%;
+					height: 10vw;
 				}
 			}
 			&__horseback {
 				background-image: url('../img/adventure/adventure_event_horseback.png');
 				background-size: cover;
 				background-repeat: no-repeat;
-				height: 10vw;
+				height: 20vw;
 				min-height: 80px;
 				min-width: 80px;
-				flex-basis: 10%;
+				flex-basis: 20%;
 				border-radius: 50%;
+				align-self: center;
 				@include breakpoint(lg) {
 					flex-basis: 20%;
+					height: 10vw;
 				}
 			}
 			&__ghosttown {
 				background-image: url('../img/adventure/adventure_event_ghosttown.png');
 				background-size: cover;
 				background-repeat: no-repeat;
-				height: 10vw;
+				height: 20vw;
 				min-height: 80px;
 				min-width: 80px;
-				flex-basis: 10%;
+				flex-basis: 20%;
 				border-radius: 50%;
+				align-self: center;
 				@include breakpoint(lg) {
 					flex-basis: 20%;
+					height: 10vw;
 				}
 			}
 		}
@@ -128,18 +150,30 @@
 			flex-direction: column;
 			justify-content: center;
 			width: 70%;
-			margin-left: 2%;
+			margin-left: 6%;
 			&-title {
 				color: $burntorange;
-				font-size: 1.3rem;
+				font-size: 3.5rem;
 				font-weight: bold;
+				@include breakpoint(lg) {
+					font-size: 2rem;
+				}
 			}
 			&-date {
 				color: grey;
+				font-size: 2.5rem;
+				@include breakpoint(lg) {
+					font-size: 1.5rem;
+				}
 			}
 			&-description {
 				width: 90%;
+				font-size: 3rem;
 				color: $deepblue;
+				@include breakpoint(lg) {
+					width: 70%;
+					font-size: 1.5rem;
+				}
 			}
 		}
 	}

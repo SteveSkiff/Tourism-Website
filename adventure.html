@@ -15,7 +15,11 @@
 
 <main id="panel">
   <header class="nav-menu--panel">
-  	<button class="toggle-button nav-menu--togglemenu">☰</button>
+  	<button class="hamburger hamburger--slider" type="button">
+      <span class="hamburger-box">
+      <span class="hamburger-inner"></span>
+      </span>
+    </button>
   	<div class="nav-menu--sitelogo">
   		<a href="index.html"><h2 class = 'nav-menu--sitetitle'>ARCELLINI</h2></a>
   		<h3 class="nav-menu--sitesubtitle">anchor yourself</h3> 
@@ -128,16 +132,16 @@
   <div class="footer-newsletter">
     <div class="footer-newsletter--mailicon"><i class="fas fa-envelope"></i></div>
     <p class="footer-newsletter--cta">Stay in touch with us!</p>
-    <textarea class="footer-newsletter--textinput" placeholder=" Email"></textarea>
+    <input class="footer-newsletter--textinput" type="email" placeholder=" Email"></input>
     <button class="footer-newsletter--signupbtn">Sign Up</button>
   </div>
   <div class="footer-legalsocial">
     <div class="footer-legalsocial-legal">
-      <a class="footer-legalsocial-legal--contact" href="#">Contact Us</a>
-      <a class="footer-legalsocial-legal--terms" href="#">Terms and Conditions</a>
-      <a class="footer-legalsocial-legal--privacy" href="#">Privacy Policy</a>
+      <p class="footer-legalsocial--copyright">&copy; Arcellini 2018</p>
+      <a class="footer-legalsocial-legal--contact" href="contact.html">Contact Us</a>
+      <a class="footer-legalsocial-legal--terms" href="legal.html#termsandcond">Terms and Conditions</a>
+      <a class="footer-legalsocial-legal--privacy" href="legal.html#privacy">Privacy Policy</a>
     </div>
-    <p class="footer-legalsocial--copyright">&copy; Arcellini 2018</p>
     <div class="footer-legalsocial-social">
       <a target="_blank" class="footer-legalsocial-social--facebook" href="#"><i class="fab fa-facebook"></i></a>
       <a target="_blank" class="footer-legalsocial-social--google" href="#"><i class="fab fa-google-plus-square"></i></a>
@@ -147,7 +151,8 @@
   </div>
 </footer>
 
-
+<!-- jquery -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 <!-- Logo and Icons -->
 <script defer src="https://use.fontawesome.com/releases/v5.1.0/js/all.js" integrity="sha384-3LK/3kTpDE/Pkp8gTNp2gR/2gOiwQ6QaO7Td0zV76UFJVhqLl4Vl3KL1We6q6wR9" crossorigin="anonymous"></script>
 <!-- Slideout (Menu) -->

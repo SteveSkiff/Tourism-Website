@@ -35,10 +35,13 @@
 		background-size: cover;
 	}
 	&-title {
-		font-size: 3.5rem;
+		font-size: 7rem;
 		color: $platinum;
-		letter-spacing: .5rem;
+		letter-spacing: 1rem;
 		margin-left: 1%;
 		padding: 3%;
+		@include breakpoint(lg) {
+			font-size: 4rem;
+		}
 	}
 }

@@ -138,6 +138,42 @@
 		"oS": 0,
 		"uL": 1
 		},
+	"\/css\/hamburgers-min.css": {
+		"aP": 1,
+		"bl": 0,
+		"ft": 16,
+		"ma": 0,
+		"oA": 0,
+		"oAP": "\/css\/hamburgers-min-min.css",
+		"oF": 0,
+		"oS": 3
+		},
+	"\/css\/hamburgers.scss": {
+		"aP": 0,
+		"bl": 0,
+		"dP": 10,
+		"dS": 0,
+		"ft": 4,
+		"ma": 0,
+		"oA": 1,
+		"oAP": "\/css\/hamburgers.css",
+		"oF": 0,
+		"oS": 0,
+		"uL": 1
+		},
+	"\/css\/legal.scss": {
+		"aP": 0,
+		"bl": 0,
+		"dP": 10,
+		"dS": 0,
+		"ft": 4,
+		"ma": 0,
+		"oA": 1,
+		"oAP": "\/css\/legal.css",
+		"oF": 0,
+		"oS": 0,
+		"uL": 1
+		},
 	"\/css\/m-areaeventlist.scss": {
 		"aP": 0,
 		"bl": 0,
@@ -331,7 +367,7 @@
 		"oAP": "\/img\/adventure\/adv_area_cent.jpg",
 		"oF": 0,
 		"oIPL": 0,
-		"opt": 0,
+		"opt": 1,
 		"q": 100
 		},
 	"\/img\/adventure\/adv_area_centroma.png": {
@@ -372,8 +408,8 @@
 		"oA": 0,
 		"oAP": "\/img\/adventure\/adventure_event_balloon.png",
 		"oF": 0,
-		"oIPL": 0,
-		"opt": 0,
+		"oIPL": 1,
+		"opt": 1,
 		"oT": 1,
 		"q": 100
 		},
@@ -383,8 +419,8 @@
 		"oA": 0,
 		"oAP": "\/img\/adventure\/adventure_event_foodfest.png",
 		"oF": 0,
-		"oIPL": 0,
-		"opt": 0,
+		"oIPL": 1,
+		"opt": 1,
 		"oT": 1,
 		"q": 100
 		},
@@ -395,7 +431,7 @@
 		"oAP": "\/img\/adventure\/adventure_event_ghosttown.jpg",
 		"oF": 0,
 		"oIPL": 0,
-		"opt": 0,
+		"opt": 1,
 		"q": 100
 		},
 	"\/img\/adventure\/adventure_event_ghosttown.png": {
@@ -416,7 +452,7 @@
 		"oAP": "\/img\/adventure\/adventure_event_horseback.jpg",
 		"oF": 0,
 		"oIPL": 0,
-		"opt": 0,
+		"opt": 1,
 		"q": 100
 		},
 	"\/img\/adventure\/adventure_event_horseback.png": {
@@ -447,7 +483,7 @@
 		"oAP": "\/img\/adventure\/adventure_feature_2.jpg",
 		"oF": 0,
 		"oIPL": 0,
-		"opt": 0,
+		"opt": 1,
 		"q": 100
 		},
 	"\/img\/adventure\/adventure_feature_3.jpg": {
@@ -487,7 +523,7 @@
 		"oAP": "\/img\/adventure\/adventure_hero_1.jpg",
 		"oF": 0,
 		"oIPL": 0,
-		"opt": 0,
+		"opt": 1,
 		"q": 100
 		},
 	"\/img\/adventure\/adventure_hero_2.jpg": {
@@ -497,7 +533,7 @@
 		"oAP": "\/img\/adventure\/adventure_hero_2.jpg",
 		"oF": 0,
 		"oIPL": 0,
-		"opt": 0,
+		"opt": 1,
 		"q": 100
 		},
 	"\/img\/adventure\/adventure_hero_3.jpg": {
@@ -507,7 +543,7 @@
 		"oAP": "\/img\/adventure\/adventure_hero_3.jpg",
 		"oF": 0,
 		"oIPL": 0,
-		"opt": 0,
+		"opt": 1,
 		"q": 100
 		},
 	"\/img\/adventure\/adventure_hero_4.jpg": {
@@ -517,7 +553,7 @@
 		"oAP": "\/img\/adventure\/adventure_hero_4.jpg",
 		"oF": 0,
 		"oIPL": 0,
-		"opt": 0,
+		"opt": 1,
 		"q": 100
 		},
 	"\/img\/adventure\/adventure_hero_5.jpg": {
@@ -547,8 +583,8 @@
 		"oA": 0,
 		"oAP": "\/img\/adventure\/adventure_pagehero_1.png",
 		"oF": 0,
-		"oIPL": 0,
-		"opt": 0,
+		"oIPL": 1,
+		"opt": 1,
 		"oT": 1,
 		"q": 100
 		},
@@ -558,8 +594,8 @@
 		"oA": 0,
 		"oAP": "\/img\/adventure\/category_hero_1.png",
 		"oF": 0,
-		"oIPL": 0,
-		"opt": 0,
+		"oIPL": 1,
+		"opt": 1,
 		"oT": 1,
 		"q": 100
 		},
@@ -611,8 +647,8 @@
 		"oA": 0,
 		"oAP": "\/img\/community\/community_pagehero_1.png",
 		"oF": 0,
-		"oIPL": 0,
-		"opt": 0,
+		"oIPL": 1,
+		"opt": 1,
 		"oT": 1,
 		"q": 100
 		},
@@ -623,7 +659,7 @@
 		"oAP": "\/img\/community\/katie-smith-104748-unsplash.jpg",
 		"oF": 0,
 		"oIPL": 0,
-		"opt": 0,
+		"opt": 1,
 		"q": 100
 		},
 	"\/img\/contactus\/adventure_pagehero_1.png": {
@@ -632,8 +668,8 @@
 		"oA": 0,
 		"oAP": "\/img\/contactus\/adventure_pagehero_1.png",
 		"oF": 0,
-		"oIPL": 0,
-		"opt": 0,
+		"oIPL": 1,
+		"opt": 1,
 		"oT": 1,
 		"q": 100
 		},
@@ -655,7 +691,7 @@
 		"oAP": "\/img\/explore\/explore_feature_1.jpg",
 		"oF": 0,
 		"oIPL": 0,
-		"opt": 0,
+		"opt": 1,
 		"q": 100
 		},
 	"\/img\/explore\/explore_feature_2.jpg": {
@@ -675,7 +711,7 @@
 		"oAP": "\/img\/explore\/explore_feature_3.jpg",
 		"oF": 0,
 		"oIPL": 0,
-		"opt": 0,
+		"opt": 1,
 		"q": 100
 		},
 	"\/img\/explore\/explore_feature_4.jpg": {
@@ -685,7 +721,7 @@
 		"oAP": "\/img\/explore\/explore_feature_4.jpg",
 		"oF": 0,
 		"oIPL": 0,
-		"opt": 0,
+		"opt": 1,
 		"q": 100
 		},
 	"\/img\/explore\/explore_feature_5.jpg": {
@@ -695,7 +731,7 @@
 		"oAP": "\/img\/explore\/explore_feature_5.jpg",
 		"oF": 0,
 		"oIPL": 0,
-		"opt": 0,
+		"opt": 1,
 		"q": 100
 		},
 	"\/img\/explore\/explore_hero_1.jpg": {
@@ -705,7 +741,7 @@
 		"oAP": "\/img\/explore\/explore_hero_1.jpg",
 		"oF": 0,
 		"oIPL": 0,
-		"opt": 0,
+		"opt": 1,
 		"q": 100
 		},
 	"\/img\/explore\/explore_hero_2.jpg": {
@@ -715,7 +751,7 @@
 		"oAP": "\/img\/explore\/explore_hero_2.jpg",
 		"oF": 0,
 		"oIPL": 0,
-		"opt": 0,
+		"opt": 1,
 		"q": 100
 		},
 	"\/img\/explore\/explore_hero_3.jpg": {
@@ -725,7 +761,7 @@
 		"oAP": "\/img\/explore\/explore_hero_3.jpg",
 		"oF": 0,
 		"oIPL": 0,
-		"opt": 0,
+		"opt": 1,
 		"q": 100
 		},
 	"\/img\/explore\/explore_index_lg.png": {
@@ -734,8 +770,8 @@
 		"oA": 0,
 		"oAP": "\/img\/explore\/explore_index_lg.png",
 		"oF": 0,
-		"oIPL": 0,
-		"opt": 0,
+		"oIPL": 1,
+		"opt": 1,
 		"oT": 1,
 		"q": 100
 		},
@@ -745,8 +781,8 @@
 		"oA": 0,
 		"oAP": "\/img\/explore\/explore_pagehero_1.png",
 		"oF": 0,
-		"oIPL": 0,
-		"opt": 0,
+		"oIPL": 1,
+		"opt": 1,
 		"oT": 1,
 		"q": 100
 		},
@@ -757,7 +793,7 @@
 		"oAP": "\/img\/explore\/wu-jianxiong-239318-unsplash.jpg",
 		"oF": 0,
 		"oIPL": 0,
-		"opt": 0,
+		"opt": 1,
 		"q": 100
 		},
 	"\/img\/hero\/hero_1.jpg": {
@@ -767,7 +803,7 @@
 		"oAP": "\/img\/hero\/hero_1.jpg",
 		"oF": 0,
 		"oIPL": 0,
-		"opt": 0,
+		"opt": 1,
 		"q": 100
 		},
 	"\/img\/hero\/hero_2.jpg": {
@@ -777,7 +813,7 @@
 		"oAP": "\/img\/hero\/hero_2.jpg",
 		"oF": 0,
 		"oIPL": 0,
-		"opt": 0,
+		"opt": 1,
 		"q": 100
 		},
 	"\/img\/plan\/plan_hero_1.jpg": {
@@ -787,7 +823,7 @@
 		"oAP": "\/img\/plan\/plan_hero_1.jpg",
 		"oF": 0,
 		"oIPL": 0,
-		"opt": 0,
+		"opt": 1,
 		"q": 100
 		},
 	"\/img\/plan\/plan_hero_2.jpg": {
@@ -797,7 +833,7 @@
 		"oAP": "\/img\/plan\/plan_hero_2.jpg",
 		"oF": 0,
 		"oIPL": 0,
-		"opt": 0,
+		"opt": 1,
 		"q": 100
 		},
 	"\/img\/plan\/plan_index_lg.png": {

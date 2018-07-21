@@ -7,7 +7,7 @@ body {
 }
 
 .nav-menu {
-  padding-top: 12%;
+  padding-top: 5%;
   line-height: 4rem;
   @include breakpoint(lg) {
     padding-top: 5%;
@@ -22,12 +22,14 @@ body {
     font-weight: normal;
     color: $platinum;
     margin:1%;
+    margin-top: 5%;
     padding-left: 3%;
-    font-size: 3.5rem;
+    font-size: 6rem;
     margin-left: 2%;
     margin-bottom: 0;
     @include breakpoint(lg) {
-      font-size: 2rem;
+      font-size: 2.3rem;
+      margin-top: 3%;
     }
   }
   &--sitesubtitle {
@@ -36,14 +38,14 @@ body {
     margin-top: -4%;
     margin-bottom: 2%;
     padding: 0;
-    margin-left: 10%;
+    margin-left: 12%;
     letter-spacing: .6rem;
-    font-size: 1rem;
+    font-size: 2.5rem;
     font-weight: normal;
     @include breakpoint(lg) {
       letter-spacing: .15rem;
       font-size: 1rem;
-      margin-left: 8%;
+      margin-left: 13%;
     }
   }
   &--sitelogo {
@@ -54,27 +56,41 @@ body {
   }
   &--togglemenu {
     color: $platinum;
-    margin-left: 2%;
+    margin-left: 0%;
+    padding: 1%;
+    padding-left: 4%;
     margin-top: 0;
-    font-size: 3.5rem;
+    padding-right: 5%;
+    font-size: 8rem;
     padding-bottom: 1.5%;
     border: none;
     background: $deepblue;
     @include breakpoint(lg) {
       font-size: 2rem;
+      padding: 0;
       padding-bottom: .2%;
+      padding-left: 2%;
+      padding-right: 2%;
+
     }
   }
   &-option {
     display: inline-block;
     padding-left: 10%;
-    font-size: 2rem;
+    padding-top: 10%;
+    font-size: 5rem;
+    line-height: 15rem;
     text-decoration: none;
     color: $platinum;
     border-bottom: 1px solid $burntorange;
+    border-top: 1px solid $burntorange;
+    padding-bottom: 10%;
+    width: 100%;
     @include breakpoint(lg) {
       padding-left: 10%;
       font-size: 2rem;
+      line-height: 2rem;
+
     }
   }
 }
@@ -84,13 +100,16 @@ body {
   position: fixed;
   top: 0;
   bottom: 0;
-  width: 256px;
+  width: 703px;
   min-height: 100vh;
   overflow-y: scroll;
   -webkit-overflow-scrolling: touch;
   z-index: 0;
   display: none;
   background-color: $deepblue;
+  @include breakpoint(lg) {
+    width: 300px;
+  }
 }
 
 .slideout-menu-left {
@@ -106,7 +125,7 @@ body {
   z-index: 1;
   will-change: transform;
   background-color: white; /* A background-color is required */
-  min-height: 100vh;
+  // min-height: 100vh;
 }
 
 .slideout-open,
@@ -133,4 +152,50 @@ body {
   width: 100%;
   background-color: rgba(0,0,0,.5);
   z-index: 99;
+}
+
+.hamburger {
+  margin-top: .5%;
+  padding: 60px 60px;
+  @include breakpoint(lg) {
+    padding:15px 15px;
+  }
+}
+
+.hamburger-inner, .hamburger-inner::before, .hamburger-inner::after {
+  background-color: $platinum;
+  width: 60px;
+  height: 5px;
+  @include breakpoint(lg) {
+    width: 40px;
+    height: 4px;
+    padding: 1%;
+  }
+}
+
+
+.hamburger--slider .hamburger-inner {
+  top: 2px; }
+  .hamburger--slider .hamburger-inner::before {
+    top: 20px;
+    transition-property: transform, opacity;
+    transition-timing-function: ease;
+    transition-duration: 0.15s; }
+  .hamburger--slider .hamburger-inner::after {
+    top: 40px; }
+@include breakpoint(lg) {
+.hamburger--slider .hamburger-inner {
+  top: 2px; }
+  .hamburger--slider .hamburger-inner::before {
+    top: 10px;
+    transition-property: transform, opacity;
+    transition-timing-function: ease;
+    transition-duration: 0.15s; }
+  .hamburger--slider .hamburger-inner::after {
+    top: 20px; }
+}
+
+
+.hamburger-inner:hover, .hamburger-inner:hover::before, .hamburger-inner:hover::after {
+  background-color: $burntorange;
 }

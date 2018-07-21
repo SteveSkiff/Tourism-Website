@@ -8,23 +8,34 @@
   clear: both;
 }
 
-
-
 .article {
 	display: flex;
 	flex-direction: column;
 	height: 100%;
 	width: 100%;
 	margin-bottom: 5%;
+	justify-content: center;
 	&-img {
-		height: 125px;
-		width: 250px;
-		background-image: url('../img/community/community_articleimg.png');
-		background-size: cover;
+		height: 450px;
+		width: 900px;
+		// background-image: url('../img/community/community_articleimg.png');
+		// background-size: cover;
+		background-color: $platinum;
+		@include breakpoint(lg) {
+			height: 150px;
+			width: 300px;
+		}
 	}
 	&-title {
+		display: flex;
+		justify-content: center;
 		text-align: center;
-		font-size: 1.3rem;
+		font-size: 4rem;
+		color: $deepblue;
+		@include breakpoint(lg) {
+			// margin: 0;
+			font-size: 2rem;
+		}
 	}
 	&-information {
 		display: flex;
@@ -32,22 +43,43 @@
 		align-items: center;
 		justify-content: space-around;
 		background: $deepblue;
-		height: 125px;
-		width: 250px;
+		height: 450px;
+		width: 900px;
+		@include breakpoint(lg) {
+			height: 150px;
+			width: 300px;
+		}
 	}
 	&-category {
-		color: $platinum;
+		color: grey;
 		font-style: italic;
-		margin: 0;
+		margin: 0%;
+		margin-top: 3%;
+		font-size: 3rem;
+		@include breakpoint(lg) {
+			font-size: 1rem;
+		}
 	}
 	&-description {
 		color: $platinum;
-		font-size: 1rem;
+		font-size: 3.5rem;
 		text-align: center;
+		width: 90%;
+		margin: 3%;
+		@include breakpoint(lg) {
+			font-size: 1rem;
+		}
 
 	}
 	&-cta {
 		color: $burntorange;
 		margin-bottom: 3%;
+		font-size: 3rem;
+		@include breakpoint(lg) {
+			font-size: 1rem;
+		}
 	}
+}
+.grid-item {
+	padding: 1% 1%;
 }

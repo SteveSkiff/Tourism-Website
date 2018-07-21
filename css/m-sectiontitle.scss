@@ -2,6 +2,11 @@
 	background-color: $deepblue;
 	color:$platinum;
 	padding: 3% 0;
-	padding-left: 3%;
-	font-size: 1.2rem;
+	padding-left: 4%;
+	font-size: 5rem;
+	@include breakpoint(lg) {
+		font-size: 2rem;
+		padding: 2% 0;
+		padding-left: 4%;
+	}
 }

@@ -1,33 +1,82 @@
 .form {
 	padding: 2%;
-	background: $deepblue;
+	outline: none;
+	// background: $deepblue;
 	display: flex;
 	flex-direction: column;
 	width: 95%;
 	margin: 1% auto;
 	@include breakpoint(lg) {
-		background: $deepblue;
-		width: 60%;
+		// background: $deepblue;
+		width: 80%;
 	}
 	&-item {
-		background: $platinum;
+		background: white;
+		color: $deepblue;
 		padding: 1.5%;
 		padding-left: 5%;
+		padding-top: 2%;
+		font-size: 3rem;
+		padding-bottom: 5%;
 		@include breakpoint(lg) {
 			padding: 2%;
 			padding-top: 2%;
+			font-size:1.5rem;
 		}
 		.newsletter {
-			font-size: .7rem;
+			font-size: 2rem;
+			@include breakpoint(lg) {
+				font-size: 1rem;
+			}
+		}
+		input {
+			font-size: 3rem;
+			padding: 1%;
+			width: 97%;
+			@include breakpoint(lg) {
+				font-size: 1rem;
+			}
+		}
+		select {
+			font-size: 2.5rem;
+			@include breakpoint(lg) {
+				font-size: 1rem;
+			}
+		}
+		input[type=checkbox] {
+			padding: 2%;
+			width: 5%;
+			@include breakpoint(lg) {
+				width: 2%;
+				padding: 0%;
+				margin: 0;
+				margin-bottom: 1%;
+				font-size: 2rem;
+
+			}
+		}
+		input[type=radio] {
+			padding:2%;
+			width: 5%;
+			@include breakpoint(lg) {
+				width: 2%;
+				margin: 0;
+				margin-left: 3%;
+				padding: 0;
+				font-size: 2rem;
+			}
 		}
 		textarea {
 			width: 95%;
-			height: 50px;
+			height: 20vw;
 			resize: none;
+			font-size: 2.5rem;
+			padding: 1%;
 			@include breakpoint(lg) {
 				width: 98%;
 				height: 50px;
 				resize: none;
+				font-size: 1rem;
 			}
 
 		}
@@ -45,7 +94,9 @@
 		padding-top: 4%;
 		display: flex;
 		justify-content: center;
+		margin-bottom: 6%;
 		button {
+			font-size: 3rem;
 			cursor: pointer;
 			padding: 5%;
 			width: 100%;
@@ -55,7 +106,8 @@
 			border: none;
 			@include breakpoint (lg) {
 				padding: 1.5%;
-				width: 50%;
+				width: 30%;
+				font-size: 1.5rem;
 			}
 		}
 		button:active {
@@ -66,3 +118,5 @@
 		}
 	}
 }
+
+

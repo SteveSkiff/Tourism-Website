@@ -2,21 +2,26 @@
 	background: $platinum;
 	display:flex;
 	flex-direction: column;
-	width: 50%;
+	width: 60%;
 	align-items: center;
 	margin: 3% auto;
 	@include breakpoint(lg) {
-		width: 30%;
+		width: 40%;
 	}
 	&-questions {
 		color: $deepblue;
-		font-size: 1.1rem;
+		font-size: 2.5rem;
+		@include breakpoint(lg) {
+			font-size: 1.5rem;
+		}
 	}
 	&-link {
 		color: $burntorange;
+		font-size: 3rem;
 		margin-bottom: 3vh;
 		@include breakpoint(lg) {
 			margin-bottom: 3vh;
+			font-size: 1.5rem;
 		}
 	}
 }

@@ -1,22 +1,30 @@
   
+function isMobileDevice() {
+    return (typeof window.orientation !== "undefined") || (navigator.userAgent.indexOf('IEMobile') !== -1);
+}
+
+
     // SLIDEOUT
 
 // Create a new Slideout instance.
   var slideout = new Slideout({
     'panel': document.getElementById('panel'),
     'menu': document.getElementById('menu'),
-    'padding': 256,
-    'tolerance': 70
+    'touch': false,
+    'padding': isMobileDevice() ? 700 : 300,
+    'tolerance': 90
   });
 
   // Toggle button
-  document.querySelector('.toggle-button').addEventListener('click', function() {
+  document.querySelector('.hamburger').addEventListener('click', function() {
     slideout.toggle();
+    $('.hamburger').toggleClass('is-active');
   });
 
 function close(eve) {
   eve.preventDefault();
   slideout.close();
+  $('.hamburger').toggleClass('is-active');
 }
 
 slideout
@@ -44,14 +52,14 @@ $toggler.click(function() {
     var isVisible  = $text.is(":visible");
   
     $content.slideUp();
-    $toggler.find("i").text("+");
-    $this.find("i").text( isVisible ? "+" : "-");
+    $toggler.find("span").text("▿");
+    $this.find("span").text( isVisible ? "▿" : "-");
     // $content.slideUp();
     $text[ isVisible ? "slideUp" : "slideDown"]();
     $toggler.removeClass('js__opened');
     $this[ isVisible ? null : $this.addClass('js__opened')];
   
-}).append("<i>+</i>").next(".faq-answertext").hide();
+}).append("<span>&#9663;</span>").next(".faq-answertext").hide();
 
 
 
@@ -65,7 +73,7 @@ $grid.isotope({
   itemSelector: '.grid-item',
   layoutMode: 'masonry',
   masonry: {
-    columnWidth: 52,
+    columnWidth: 0,
     fitWidth: true
   }
 });
@@ -126,22 +134,23 @@ if( contactform.length ) {
 
 
     // LEAFLET MAP
-
-var mymap = L.map('map').setView([38.855786,16.540565], 8.3);
+console.log('leaflet working')
+var mymap = L.map('map').setView([38.855786,16.540565], 8);
 
 
 L.tileLayer('https://api.mapbox.com/styles/v1/sskiff/cjjqahfra089x2rpcsvp3kwgf/tiles/256/{z}/{x}/{y}?access_token=pk.eyJ1Ijoic3NraWZmIiwiYSI6ImNqanAyNnR0eDFyd2wzdm8xMjI3MnpycjUifQ._qeUS6bN0eHOVavD6zmWgw', {
     attribution: '&copy; Arcellini 2018',
-    maxZoom: 10,
-    minZoom: 8.5,
+    maxZoom: 11,
+    minZoom: 8,
     id: 'mapbox.streets',
     accessToken: 'pk.eyJ1Ijoic3NraWZmIiwiYSI6ImNqanAyNnR0eDFyd2wzdm8xMjI3MnpycjUifQ._qeUS6bN0eHOVavD6zmWgw'
 }).addTo(mymap);
 mymap.setMaxBounds(mymap.getBounds());
 
 
+
 var marketMarker = L.marker([38.783, 16.299]).on('click', marketMarkCheck).addTo(mymap);
-marketMarker.bindPopup("<b>Seaside Market</b><br/>Jun. 1 - Jul. 30")
+marketMarker.bindPopup("<b>Seaside Market</b><br/>Jun. 1 - Jul. 30", {closeButton: false})
 
 function marketMarkCheck() {
   marketMarker.on('popupopen', function() {
@@ -154,7 +163,7 @@ function marketMarkCheck() {
 
 
 var balloonMarker = L.marker([38.953, 16.359]).on('click', balloonMarkCheck).addTo(mymap);
-balloonMarker.bindPopup("<b>Air Balloon Rides</b><br/>Jan. 1 - Mar. 1")
+balloonMarker.bindPopup("<b>Air Balloon Rides</b><br/>Jan. 1 - Mar. 1", {closeButton: false})
 
 function balloonMarkCheck() {
   balloonMarker.on('popupopen', function() {
@@ -167,7 +176,7 @@ function balloonMarkCheck() {
 
 
 var horseMarker = L.marker([38.053, 16.059]).on('click', horseMarkCheck).addTo(mymap);
-horseMarker.bindPopup("<b>Horseback Riding</b><br/>Mar. 1 - Oct. 15")
+horseMarker.bindPopup("<b>Horseback Riding</b><br/>Mar. 1 - Oct. 15", {closeButton: false})
 
 function horseMarkCheck() {
   horseMarker.on('popupopen', function() {
@@ -180,7 +189,7 @@ function horseMarkCheck() {
 
 
 var ghostMarker = L.marker([38.153, 15.729]).on('click', ghostMarkCheck).addTo(mymap);
-ghostMarker.bindPopup("<b>Ghost Town Tour</b><br/>Aug. 1 - Nov. 30")
+ghostMarker.bindPopup("<b>Ghost Town Tour</b><br/>Aug. 1 - Nov. 30", {closeButton: false})
 
 
 function ghostMarkCheck() {
@@ -195,7 +204,7 @@ function ghostMarkCheck() {
 
 
 var carnivaliMarker = L.marker([39.553, 16.729]).on('click', carnivaliMarkCheck).addTo(mymap);
-carnivaliMarker.bindPopup("<b>Carnivali</b><br/>Oct. 1 - Nov. 1")
+carnivaliMarker.bindPopup("<b>Carnivali</b><br/>Oct. 1 - Nov. 1", {closeButton: false})
 
 
 function carnivaliMarkCheck() {
@@ -210,7 +219,7 @@ function carnivaliMarkCheck() {
 
 
 var prideMarker = L.marker([39.623, 16.439]).on('click', prideMarkCheck).addTo(mymap);
-prideMarker.bindPopup("<b>Pizano Pride</b><br/>End of June")
+prideMarker.bindPopup("<b>Pizano Pride</b><br/>End of June", {closeButton: false})
 
 
 function prideMarkCheck() {
@@ -222,17 +231,6 @@ function prideMarkCheck() {
   })
 }
 
-
-
-// var $eventitems = $('.list-eventitem');
-
-// $eventitems.on('mouseover', () => {
-//   $(this).addClass('js__active');
-// })
-
-// $eventitems.on('mouseleave', () => {
-//   $(this).removeClass('js__active');
-// })
 
 
 

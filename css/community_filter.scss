@@ -1,17 +1,31 @@
 .filter {
 	display:flex;
-	justify-content: space-around;
-	margin: 3%;
+	justify-content: space-evenly;
+	font-size: 3.5rem;
+	margin: 0;
+	flex-direction: row;
+	flex-wrap: wrap;
+	@include breakpoint(lg) {
+		font-size: 1.5rem;
+		justify-content: center;
+		// margin-left: 2%;
+		// margin-top: 3%;
+	}
 	&-container {
 		display: flex;
 		justify-content: center;
 		align-items: center;
+		flex-direction: row;
+		flex-wrap: wrap;
 		&-item {
 			background: $platinum;
 			padding: 2% 5%;
+			margin: 3%;
+			border: 6px solid $deepblue;
 			&__selected {
 			background: $burntorange;
 			color: $platinum;
+			border: 6px solid transparent;
 			}
 			input {
 			display: none;

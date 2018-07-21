@@ -12,6 +12,9 @@ $burntorange: #7D301A;
 
 // INDEX
 
+
+@import 'hamburgers.scss';
+
 @import 'breakpoints.scss';
 
 @import "m-navigation.scss";
@@ -21,6 +24,8 @@ $burntorange: #7D301A;
 @import "m-combined_feature.scss";
 
 @import "m-footer.scss";
+
+@import "legal.scss";
 
 // CONTACT US FORM
 

@@ -13,21 +13,36 @@
 	&-weeklyevents {
 		display: flex;
 		flex-direction: column;
+		margin: 5% 0;
+		@include breakpoint(lg) {
+			margin: 2% 0;
+		}
+		
 		&-area {
-			font-size: 1.3rem;
+			font-size: 3.5rem;
 			color: $deepblue;
 			margin-top: 3%;
 			font-weight: bold;
+			@include breakpoint(lg) {
+				font-size: 2rem;
+			}
 			&-eventlist {
 				margin: 0;
 				&-item {
 					a {
+						font-size: 3rem;
 						color: $burntorange;
+						@include breakpoint(lg) {
+							font-size: 1.5rem;
+						}
 					}
 					&-date {
 						font-style: italic;
 						color: $deepblue;
-						font-size: .9rem;
+						font-size: 2rem;
+						@include breakpoint(lg) {
+							font-size: 1.5rem;
+						}
 					}
 				}
 			}

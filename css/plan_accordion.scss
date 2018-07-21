@@ -2,19 +2,20 @@
 	margin-top: 2%;
 	&-accordionbtn {
 		display: block;
-		width: 80%;
+		width: 90%;
 		margin: 0 auto;
 		background: $platinum;
 		color: $deepblue;
-		font-size: 1.2rem;
+		font-size: 3rem;
 		border: none;
 		text-align: left;
 		padding: 3%;
 		@include breakpoint(lg) {
 			padding: 1%;
 			width: 70%;
+			font-size: 1.5rem;
 		}
-		i {
+		span {
 			color: $burntorange;
 			float: right;
 		}
@@ -24,8 +25,10 @@
 		width: 75%;
 		margin: 1% auto;
 		color: $deepblue;
+		font-size: 3rem;
 		@include breakpoint(lg)	{
 			width: 65%;
+			font-size: 1.2rem;
 		}	
 		&-link {
 			color: $burntorange;

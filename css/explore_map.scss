@@ -1,18 +1,38 @@
+
 #map {
-	height: 100vh;
-	width: 80vw;
-	border: 3px solid black;
+	height: 50vh;
+	width: 100vw;
+	border-top: 3px solid black;
+	@include breakpoint(lg) {
+		height: 100vh;
+	}
 }
 
 .mapandlist {
 	display: flex;
+	flex-direction: column;
+	@include breakpoint(lg) {
+		flex-direction: row;
+	}
+	.divider {
+		background: $deepblue;
+		margin: 0;
+		font-size: 4.5rem;
+		color: $platinum;
+		padding: 8%;
+		padding-left: 6%;
+		@include breakpoint(lg) {
+			display:none;
+		}
+	}
 	.list {
+		// margin-top: 20%;
 		display: flex;
 		flex-direction: column;
 		background: $deepblue;
-		width: 60%;
+		// width: 60%;
 		height: 100vh;
-		overflow: scroll;
+		border-bottom: 3px solid black;
 		// .js__active {
 		// 	background: $deepblue;
 		// 	p {
@@ -20,7 +40,9 @@
 		// 	}
 		// }
 		@include breakpoint(lg) {
-			width: 40%;
+			// width: 40%;
+			overflow: scroll;
+
 		}
 		&-eventitem {
 			text-decoration: none;
@@ -30,25 +52,33 @@
 			border-top: 1px solid black;
 			&-title {
 				color: $burntorange;
-				font-size: 1.2rem;
+				font-size: 4rem;
 				letter-spacing: .1rem;
 				font-weight: bold;
 				margin: 2%;
 				margin-left: 4%;
+				margin-bottom: 0;
 				text-decoration: underline;
+				// font-variant: small-caps;
 				@include breakpoint(lg) {
 					font-size: 1.5rem;
+					// text-shadow: 1.2px 0px 0px rgba(255, 255, 255, .2);
 				}
 			}
 			&-date {
 				color: grey;
 				margin: 0;
 				margin-left: 4%;
-				margin-top: 1%;
+				// margin-top: 1%;
+				padding: 0;
 				margin-bottom: 3%;
+				font-size: 2.5rem;
+				@include breakpoint(lg) {
+					font-size: 1rem;
+				}
 			}
 			&-desc {
-				font-size: .9rem;
+				font-size: 3rem;
 				margin: 2%;
 				margin-left: 4%;
 				color: $deepblue;
@@ -58,16 +88,21 @@
 			}
 		}
 		&-eventitem:hover {
-			transition: 0.2s ease;
-			background: $deepblue;
-			p {
-				color: $platinum;
+			@include breakpoint(lg) {
+				transition: 0.2s ease;
+				background: $deepblue;
+				div {
+					color: $platinum;
+				}
+				p {
+					color: $platinum;
+				}
 			}
 		}
 	}
 	.js__active {
+		@include breakpoint(lg) {
 			background: $deepblue;
-			p {
 			color: $platinum;
 			}
 		}
@@ -76,6 +111,15 @@
 
 .leaflet-popup-tip,
 .leaflet-popup-content-wrapper {
+	font: 'Monserrat';
     background: $burntorange;
     color: $platinum;
+    font-size: 2.2rem;
+    padding: 0%;
+    @include breakpoint(lg) {
+    	font-size: 1.2rem;
+    }
+}
+.leaflet-popup-content {
+	padding: 3%;
 }

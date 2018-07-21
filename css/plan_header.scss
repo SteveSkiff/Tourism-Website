@@ -3,16 +3,16 @@
 	align-items: center;
 	justify-content: space-between;
 	margin-bottom: 5%;
-	margin-top: 5%;
+	margin-top: 10%;
 	@include breakpoint(lg) {
 		margin-bottom: 1%;
 		margin-top: 3%;
 	}
 	&-header {
 		color: $deepblue;
-		padding-left:12%;
+		padding-left:7%;
 		margin: 0;
-		font-size: 1.5rem;
+		font-size: 3.5rem;
 		@include breakpoint(lg) {
 			padding-left: 16%;
 			font-size: 2rem;
@@ -20,11 +20,12 @@
 	}
 	.fa-plane, .fa-money-bill, .fa-bus {
 		color: $burntorange;
-		padding-right: 12%;
-		font-size: 1.5rem;
-		// padding-top:3.5%;
+		padding-right: 8%;
+		font-size: 3rem;
+		// padding-top:2%;
 		@include breakpoint(lg) {
 			padding-right: 16%;
+			font-size: 2rem;
 		}
 	}
 }

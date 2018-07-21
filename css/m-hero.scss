@@ -1,3 +1,29 @@
+
+// ANIMATION
+
+@keyframes pop-in {
+  0% {
+    opacity: 0;
+    transform: translateY(-4rem) scale(.8);
+  }
+  100% {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+// HERO CONTENT
+
 .hero {
     margin: 0;
 	display:inline-block;
@@ -25,12 +51,12 @@
    		top: 30%;
     	left: 50%;
         margin: 0;
-        padding-top: 25%;
+        padding-top: 15%;
     	// transform: translate(-50%, -50%);
-    	font-size: 5rem;
+    	font-size: 7rem;
     	width: 100%;
     	letter-spacing: .5rem;
-    	// border-bottom: 3px solid $burntorange;
+    	text-shadow: 1.5px -1.5px 0px $deepblue;
     	@include breakpoint(lg) {
     		top: 30%;
     		left: 50%;
@@ -38,18 +64,28 @@
     		letter-spacing: .5rem;
     	}
         .lg-letters {
-            font-size: 5.5rem;
+            font-size: 7.5rem;
             @include breakpoint(lg) {
                 font-size: 6.5rem;
             }
         }
 	}
+    &--title::before {
+        content: ''
+    }
+    &--title::after {
+        content: ''
+    }
+    .animate__pop {
+        animation: pop-in 1.5s ease-out forwards;
+    }
 	&--catchphrase {
 		// position: absolute;
    		top: 52%;
     	left: 50%;
     	// transform: translate(-50%, -50%);
-    	font-size: 1.7rem;
+        // padding-top: 40%;
+    	font-size: 3rem;
     	width: 100%;
     	margin-top: 0%;
     	font-style: italic;
@@ -60,6 +96,9 @@
     		// margin-top: 1.3%;
     	}
 	}
+    .animate__fade {
+        animation: fade-in 2s ease-in forwards;
+    }
 	.fa-angle-double-down {
 		display:inline-block;
         position: absolute;
