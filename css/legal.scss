@@ -1,0 +1,16 @@
+.section {
+	font-size: 3rem;
+	margin: 0;
+	margin-top: 3%;
+	margin-left: 6.5%;
+	&-subtext {
+		margin: 0;
+		margin-bottom: 3%;
+		font-style: italic;
+		margin-left: 9%;
+	}
+	&-primarytext {
+		width: 80%;
+		margin: 1% auto;
+	}
+}
