@@ -15,6 +15,10 @@
 			background: $platinum;
 			// padding: 3%;
 		}
+		&--mailicon {
+			// margin-left: 2%;
+			width: 8%;
+		}
 		&--cta {
 			font-size: 4rem;
 			margin-top: 0;
@@ -63,10 +67,11 @@
 		}
 		&--signupbtn:hover {
 			@include breakpoint(lg) {
+				cursor: pointer;
 				color: $platinum;
 				background: $burntorange;
-				box-shadow: 1px 2px black;
-				transform: translateY(-2px);
+				// box-shadow: 1px 2px black;
+				// transform: translateY(-2px);
 			}
 		}
 	}
@@ -126,13 +131,38 @@
 			display: flex;
 			flex-direction: row;
 			flex-wrap: wrap;
-			width: 25vw;
+			width: 25%;
 			flex-shrink: 0;
+			&--facebook {
+				width: 50%;
+				@include breakpoint(lg) {
+					width: 15%;
+				}
+			}
+			&--google {
+				width: 50%;
+				@include breakpoint(lg) {
+					width: 15%;
+				}
+			}
+			&--twitter {
+				width: 50%;
+				@include breakpoint(lg) {
+					width: 15%;
+				}
+			}
+			&--youtube {
+				width: 50%;
+				@include breakpoint(lg) {
+					width: 15%;
+				}
+			}
 			@include breakpoint(lg) {
 				margin-left: 0;
 				flex-shrink: 0;
 			}
 		}
+
 
 	}
 }
@@ -151,7 +181,7 @@
 	color: $platinum;
 	@include breakpoint(lg) {
 		font-size:2rem;
-		padding: 25%;
+		// padding: 25%;
 	}
 }
 .fa-facebook:hover, .fa-google-plus-square:hover, .fa-twitter-square:hover, .fa-youtube-square:hover {

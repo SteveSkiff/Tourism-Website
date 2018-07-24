@@ -83,9 +83,9 @@ body {
     text-decoration: none;
     color: $platinum;
     border-bottom: 1px solid $burntorange;
-    border-top: 1px solid $burntorange;
+    // border-top: 1px solid $burntorange;
     padding-bottom: 10%;
-    width: 100%;
+    // width: 100%;
     @include breakpoint(lg) {
       padding-left: 10%;
       font-size: 2rem;

@@ -25,7 +25,7 @@
 				background-image: url('../img/adventure/adv_area_cent.jpg');
 				background-size: cover;
 				@include breakpoint(lg) {
-					height: 20vw;
+					height: 25vw;
 				}
 			}
 			&__naflionne {
@@ -35,7 +35,7 @@
 				background-image: url('../img/adventure/adv_area_naf.jpg');
 				background-size: cover;
 				@include breakpoint(lg) {
-					height: 20vw;
+					height: 25vw;
 				}
 			}
 		}

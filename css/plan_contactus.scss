@@ -25,3 +25,22 @@
 		}
 	}
 }
+
+#thankyouform {
+	display: none;
+	text-align: center;
+	padding: 5%;
+	padding-bottom: 8%;
+	.thanks-header {
+		font-size: 3rem;
+		padding: 0;
+		margin: 2%;
+	}
+	.thanks-paragraph {
+		font-size: 1.2rem;
+	}
+}
+
+.hidden {
+	display: none;
+}

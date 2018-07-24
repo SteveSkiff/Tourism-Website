@@ -67,6 +67,13 @@ $toggler.click(function() {
     // COMMUNITY FILTER
 
 var $grid = $('.grid');
+if($grid.length > 0) {
+
+  setupCommunityGrid()
+
+}
+
+function setupCommunityGrid() {
 
 $grid.isotope({
   // options
@@ -104,6 +111,9 @@ $filterItem.on('change', function(){
   }
 })
 
+}
+
+
 
 
     // CONTACT FORM
@@ -115,18 +125,22 @@ if( contactform.length ) {
     event.preventDefault()
     var values = contactform.serializeArray()
     console.log(values)
+    var queryString = '?' + contactform.serialize();
 
     $.ajax({
-      url: contactform.attr('action'),
+
+      url: contactform.attr('action') + queryString,
       success: function(returnData, textStatus, jqXHR) {
-        console.log('succeeded', returnData)
+        $('#contactform').addClass('hidden');
+        $('#thankyouform').fadeIn(300); 
+        console.log('succeeded', returnData);
       },
       error: function(jqXHR, textStatus, errorThrown) {
-        console.log('failed', errorThrown)
+        console.log('failed', errorThrown);
       }
 
     })
-
+  
   })
 
 }
@@ -134,14 +148,22 @@ if( contactform.length ) {
 
 
     // LEAFLET MAP
-console.log('leaflet working')
-var mymap = L.map('map').setView([38.855786,16.540565], 8);
 
+if($('#map').length > 0) {
 
-L.tileLayer('https://api.mapbox.com/styles/v1/sskiff/cjjqahfra089x2rpcsvp3kwgf/tiles/256/{z}/{x}/{y}?access_token=pk.eyJ1Ijoic3NraWZmIiwiYSI6ImNqanAyNnR0eDFyd2wzdm8xMjI3MnpycjUifQ._qeUS6bN0eHOVavD6zmWgw', {
+  console.log('leaflet working')
+  setupExploreMap()
+
+}
+
+function setupExploreMap() {
+
+  var mymap = L.map('map').setView([38.855786,16.540565], 8);
+
+  L.tileLayer('https://api.mapbox.com/styles/v1/sskiff/cjjqahfra089x2rpcsvp3kwgf/tiles/256/{z}/{x}/{y}?access_token=pk.eyJ1Ijoic3NraWZmIiwiYSI6ImNqanAyNnR0eDFyd2wzdm8xMjI3MnpycjUifQ._qeUS6bN0eHOVavD6zmWgw', {
     attribution: '&copy; Arcellini 2018',
-    maxZoom: 11,
-    minZoom: 8,
+    maxZoom: 9,
+    minZoom: 9,
     id: 'mapbox.streets',
     accessToken: 'pk.eyJ1Ijoic3NraWZmIiwiYSI6ImNqanAyNnR0eDFyd2wzdm8xMjI3MnpycjUifQ._qeUS6bN0eHOVavD6zmWgw'
 }).addTo(mymap);
@@ -230,10 +252,52 @@ function prideMarkCheck() {
     $('.list-eventitem__pride').removeClass('js__active')
   })
 }
+}
+
+
+// Place down arrow within visible area.
+// get height of window.
+// Get heignt of nav bar
+// get height of arrow + bottom margin.
+// arrow top = window height - nav height - arrow height.
+
+
+$(document).ready(function(){
+
+  $(window).on("resize", function(){
+    var windowHeight = $(window).height()
+    var navHeight = $(".nav-menu--sitelogo").height()
+    // var arrowHeight = $(".fa-angle-double-down").height()
+    var arrowHeight = 96; // Font Awesome doesn't load fast enough to measure this
+
+    var arrowTopCoordinate = windowHeight - navHeight - arrowHeight - 0;
+    $(".arrow-indicating-scroll").css("top", arrowTopCoordinate)
+    console.log("arrow top ", arrowTopCoordinate)
+    //debugger;
+  }).trigger("resize");
+
+
+})
 
 
 
 
+// var onLoadWindowHeight = $(window).height();
+// var $scrollArrow = $('.fa-angle-double-down');
+// var height = $(window).scrollTop();
+
+$(document).on('scroll', function() {
+  // console.log('Scroll funct. working.')
+  var height = $(window).scrollTop();
+  if( height > 0) {
+    // console.log('condition met')
+    $('.fa-angle-double-down').fadeTo(300,0);
+    // debugger;
+  } else {
+    // console.log('not met')
+    $('.fa-angle-double-down').fadeIn(100);
+  }
+});
 
 
 

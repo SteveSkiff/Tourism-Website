@@ -2,7 +2,7 @@
 #map {
 	height: 50vh;
 	width: 100vw;
-	border-top: 3px solid black;
+	border: 3px solid black;
 	@include breakpoint(lg) {
 		height: 100vh;
 	}
@@ -92,7 +92,7 @@
 				transition: 0.2s ease;
 				background: $deepblue;
 				div {
-					color: $platinum;
+					color: $burntorange;
 				}
 				p {
 					color: $platinum;
@@ -103,10 +103,12 @@
 	.js__active {
 		@include breakpoint(lg) {
 			background: $deepblue;
-			color: $platinum;
+			p {
+				color: $platinum;
+			}
 			}
 		}
-}
+}d
 
 
 .leaflet-popup-tip,

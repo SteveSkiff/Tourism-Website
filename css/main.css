@@ -3,6 +3,91 @@ body {
   font-size: 12pt; }
 
 /*!
+ * animate.css -http://daneden.me/animate
+ * Version - 3.6.2
+ * Licensed under the MIT license - http://opensource.org/licenses/MIT
+ *
+ * Copyright (c) 2018 Daniel Eden
+ */
+.animated {
+  -webkit-animation-duration: 3s;
+  animation-duration: 3s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both; }
+
+.animated.infinite {
+  -webkit-animation-iteration-count: infinite;
+  animation-iteration-count: infinite;
+  animation-delay: 4s; }
+
+@-webkit-keyframes bounce {
+  from,
+  10%,
+  27%,
+  40%,
+  to {
+    -webkit-animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+    animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0); }
+  20%,
+  22% {
+    -webkit-animation-timing-function: cubic-bezier(0.755, 0.05, 0.855, 0.06);
+    animation-timing-function: cubic-bezier(0.755, 0.05, 0.855, 0.06);
+    -webkit-transform: translate3d(0, -30px, 0);
+    transform: translate3d(0, -30px, 0); }
+  35% {
+    -webkit-animation-timing-function: cubic-bezier(0.755, 0.05, 0.855, 0.06);
+    animation-timing-function: cubic-bezier(0.755, 0.05, 0.855, 0.06);
+    -webkit-transform: translate3d(0, -15px, 0);
+    transform: translate3d(0, -15px, 0); }
+  45% {
+    -webkit-transform: translate3d(0, -4px, 0);
+    transform: translate3d(0, -4px, 0); }
+  100%, 9% {
+    -webkit-transform: translate3d(0, -4px, 0);
+    transform: translate3d(0, -4px, 0); } }
+
+/* @keyframes bounce {
+  from,
+  20%,
+  53%,
+  80%,
+  to {
+    -webkit-animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+    animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+
+  40%,
+  43% {
+    -webkit-animation-timing-function: cubic-bezier(0.755, 0.05, 0.855, 0.06);
+    animation-timing-function: cubic-bezier(0.755, 0.05, 0.855, 0.06);
+    -webkit-transform: translate3d(0, -30px, 0);
+    transform: translate3d(0, -30px, 0);
+  }
+
+  70% {
+    -webkit-animation-timing-function: cubic-bezier(0.755, 0.05, 0.855, 0.06);
+    animation-timing-function: cubic-bezier(0.755, 0.05, 0.855, 0.06);
+    -webkit-transform: translate3d(0, -15px, 0);
+    transform: translate3d(0, -15px, 0);
+  }
+
+  90% {
+    -webkit-transform: translate3d(0, -4px, 0);
+    transform: translate3d(0, -4px, 0);
+  }
+}
+*/
+.bounce {
+  -webkit-animation-name: bounce;
+  animation-name: bounce;
+  -webkit-transform-origin: center bottom;
+  transform-origin: center bottom; }
+
+/*!
  * Hamburgers
  * @description Tasty CSS-animated hamburgers
  * @author Jonathan Suh @jonsuh
@@ -881,10 +966,8 @@ body {
     line-height: 15rem;
     text-decoration: none;
     color: #DFE1E7;
-    border-bottom: 1px solid #7D301A;
-    border-top: 1px solid #7D301A;
-    padding-bottom: 10%;
-    width: 100%; }
+    border-bottom: 1px solid #bf4928;
+    padding-bottom: 10%; }
     @media (min-width: 1200px) {
       .nav-menu-option {
         padding-left: 10%;
@@ -982,7 +1065,7 @@ body {
     top: 20px; } }
 
 .hamburger-inner:hover, .hamburger-inner:hover::before, .hamburger-inner:hover::after {
-  background-color: #7D301A; }
+  background-color: #bf4928; }
 
 @keyframes pop-in {
   0% {
@@ -1053,19 +1136,19 @@ body {
         font-size: 2rem; } }
   .hero .animate__fade {
     animation: fade-in 2s ease-in forwards; }
-  .hero .fa-angle-double-down {
-    display: inline-block;
+  .hero .arrow-indicating-scroll {
     position: absolute;
-    top: 85%;
-    left: 47%;
+    text-align: center; }
+  .hero .fa-angle-double-down {
     z-index: 100;
-    color: #7D301A;
+    fill-opacity: 1;
+    color: #bf4928;
     font-size: 5rem;
     text-align: center; }
     @media (min-width: 1200px) {
       .hero .fa-angle-double-down {
         font-size: 6rem;
-        left: 48%; } }
+        left: 47.5vw; } }
 
 .pagefeature {
   display: flex;
@@ -1154,17 +1237,16 @@ body {
         margin-right: 4%;
         margin-top: 4%; } }
   .pagefeature--link {
-    color: #7D301A;
-    text-shadow: 1px 1px 0px rgba(255, 255, 255, 0.3);
+    color: #bf4928;
     padding: 2%;
-    margin-left: 2.5%;
+    margin-left: 2%;
     margin-right: 4%;
     font-size: 3rem;
     text-decoration: none; }
     @media (min-width: 1200px) {
       .pagefeature--link {
-        color: #7D301A;
-        margin-left: 2.5%;
+        color: #bf4928;
+        margin-left: 2%;
         margin-right: 4%;
         margin-bottom: 4%;
         font-size: 1.1rem; } }
@@ -1189,6 +1271,8 @@ body {
       flex-direction: row;
       justify-content: center;
       background: #DFE1E7; } }
+  .footer-newsletter--mailicon {
+    width: 8%; }
   .footer-newsletter--cta {
     font-size: 4rem;
     margin-top: 0;
@@ -1216,7 +1300,7 @@ body {
         margin-bottom: 0; } }
   .footer-newsletter--signupbtn {
     width: 10%;
-    background: #7D301A;
+    background: #bf4928;
     color: #DFE1E7;
     font-size: 2.5rem;
     border: none;
@@ -1234,10 +1318,9 @@ body {
         margin-bottom: 0; } }
   @media (min-width: 1200px) {
     .footer-newsletter--signupbtn:hover {
+      cursor: pointer;
       color: #DFE1E7;
-      background: #7D301A;
-      box-shadow: 1px 2px black;
-      transform: translateY(-2px); } }
+      background: #bf4928; } }
 
 .footer-legalsocial {
   display: flex;
@@ -1285,8 +1368,28 @@ body {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    width: 25vw;
+    width: 25%;
     flex-shrink: 0; }
+    .footer-legalsocial-social--facebook {
+      width: 50%; }
+      @media (min-width: 1200px) {
+        .footer-legalsocial-social--facebook {
+          width: 15%; } }
+    .footer-legalsocial-social--google {
+      width: 50%; }
+      @media (min-width: 1200px) {
+        .footer-legalsocial-social--google {
+          width: 15%; } }
+    .footer-legalsocial-social--twitter {
+      width: 50%; }
+      @media (min-width: 1200px) {
+        .footer-legalsocial-social--twitter {
+          width: 15%; } }
+    .footer-legalsocial-social--youtube {
+      width: 50%; }
+      @media (min-width: 1200px) {
+        .footer-legalsocial-social--youtube {
+          width: 15%; } }
     @media (min-width: 1200px) {
       .footer-legalsocial-social {
         margin-left: 0;
@@ -1294,7 +1397,7 @@ body {
 
 .fa-envelope {
   font-size: 9rem;
-  color: #7D301A; }
+  color: #bf4928; }
   @media (min-width: 1200px) {
     .fa-envelope {
       padding-right: 30%;
@@ -1306,11 +1409,10 @@ body {
   color: #DFE1E7; }
   @media (min-width: 1200px) {
     .fa-facebook, .fa-google-plus-square, .fa-twitter-square, .fa-youtube-square {
-      font-size: 2rem;
-      padding: 25%; } }
+      font-size: 2rem; } }
 
 .fa-facebook:hover, .fa-google-plus-square:hover, .fa-twitter-square:hover, .fa-youtube-square:hover {
-  color: #7D301A;
+  color: #bf4928;
   transform: translateY(-2px); }
 
 .section {
@@ -1417,7 +1519,7 @@ body {
       padding: 5%;
       width: 100%;
       color: #DFE1E7;
-      background: #7D301A;
+      background: #bf4928;
       box-shadow: 0px 0px 2px black;
       border: none; }
       @media (min-width: 1200px) {
@@ -1513,7 +1615,7 @@ body {
         background-size: cover; }
         @media (min-width: 1200px) {
           .areapromo-areahighlight-image__centroma {
-            height: 20vw; } }
+            height: 25vw; } }
       .areapromo-areahighlight-image__naflionne {
         flex-basis: 50%;
         margin: 0;
@@ -1522,7 +1624,7 @@ body {
         background-size: cover; }
         @media (min-width: 1200px) {
           .areapromo-areahighlight-image__naflionne {
-            height: 20vw; } }
+            height: 25vw; } }
     .areapromo-areahighlight-textblock {
       display: flex;
       flex-direction: column;
@@ -1626,7 +1728,7 @@ body {
       width: 70%;
       margin-left: 6%; }
       .areapromo-event-details-title {
-        color: #7D301A;
+        color: #bf4928;
         font-size: 3.5rem;
         font-weight: bold; }
         @media (min-width: 1200px) {
@@ -1678,7 +1780,7 @@ body {
         margin: 0; }
         .events-weeklyevents-area-eventlist-item a {
           font-size: 3rem;
-          color: #7D301A; }
+          color: #bf4928; }
           @media (min-width: 1200px) {
             .events-weeklyevents-area-eventlist-item a {
               font-size: 1.5rem; } }
@@ -1708,7 +1810,7 @@ body {
         width: 70%;
         font-size: 1.5rem; } }
     .faq-accordionbtn span {
-      color: #7D301A;
+      color: #bf4928;
       float: right; }
   .faq-answertext {
     transition: ease-in-out;
@@ -1721,7 +1823,7 @@ body {
         width: 65%;
         font-size: 1.2rem; } }
     .faq-answertext-link {
-      color: #7D301A; }
+      color: #bf4928; }
 
 .js__opened {
   background: #121A2C;
@@ -1744,13 +1846,28 @@ body {
       .contactus-questions {
         font-size: 1.5rem; } }
   .contactus-link {
-    color: #7D301A;
+    color: #bf4928;
     font-size: 3rem;
     margin-bottom: 3vh; }
     @media (min-width: 1200px) {
       .contactus-link {
         margin-bottom: 3vh;
         font-size: 1.5rem; } }
+
+#thankyouform {
+  display: none;
+  text-align: center;
+  padding: 5%;
+  padding-bottom: 8%; }
+  #thankyouform .thanks-header {
+    font-size: 3rem;
+    padding: 0;
+    margin: 2%; }
+  #thankyouform .thanks-paragraph {
+    font-size: 1.2rem; }
+
+.hidden {
+  display: none; }
 
 .sectionheader {
   display: flex;
@@ -1772,7 +1889,7 @@ body {
         padding-left: 16%;
         font-size: 2rem; } }
   .sectionheader .fa-plane, .sectionheader .fa-money-bill, .sectionheader .fa-bus {
-    color: #7D301A;
+    color: #bf4928;
     padding-right: 8%;
     font-size: 3rem; }
     @media (min-width: 1200px) {
@@ -1843,7 +1960,7 @@ body {
       .article-description {
         font-size: 1rem; } }
   .article-cta {
-    color: #7D301A;
+    color: #bf4928;
     margin-bottom: 3%;
     font-size: 3rem; }
     @media (min-width: 1200px) {
@@ -1876,7 +1993,7 @@ body {
       margin: 3%;
       border: 6px solid #121A2C; }
       .filter-container-item__selected {
-        background: #7D301A;
+        background: #bf4928;
         color: #DFE1E7;
         border: 6px solid transparent; }
       .filter-container-item input {
@@ -1885,7 +2002,7 @@ body {
 #map {
   height: 50vh;
   width: 100vw;
-  border-top: 3px solid black; }
+  border: 3px solid black; }
   @media (min-width: 1200px) {
     #map {
       height: 100vh; } }
@@ -1922,7 +2039,7 @@ body {
       border-bottom: 1px solid black;
       border-top: 1px solid black; }
       .mapandlist .list-eventitem-title {
-        color: #7D301A;
+        color: #bf4928;
         font-size: 4rem;
         letter-spacing: .1rem;
         font-weight: bold;
@@ -1956,23 +2073,26 @@ body {
         transition: 0.2s ease;
         background: #121A2C; }
         .mapandlist .list-eventitem:hover div {
-          color: #DFE1E7; }
+          color: #bf4928; }
         .mapandlist .list-eventitem:hover p {
           color: #DFE1E7; } }
   @media (min-width: 1200px) {
     .mapandlist .js__active {
-      background: #121A2C;
-      color: #DFE1E7; } }
+      background: #121A2C; }
+      .mapandlist .js__active p {
+        color: #DFE1E7; } }
 
+d
 .leaflet-popup-tip,
 .leaflet-popup-content-wrapper {
   font: 'Monserrat';
-  background: #7D301A;
+  background: #bf4928;
   color: #DFE1E7;
   font-size: 2.2rem;
   padding: 0%; }
   @media (min-width: 1200px) {
-    .leaflet-popup-tip,
+    d
+.leaflet-popup-tip,
     .leaflet-popup-content-wrapper {
       font-size: 1.2rem; } }
 

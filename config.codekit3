@@ -30,6 +30,19 @@
 		"oAP": "\/contact.html",
 		"oF": 0
 		},
+	"\/css\/animation.scss": {
+		"aP": 0,
+		"bl": 0,
+		"dP": 10,
+		"dS": 0,
+		"ft": 4,
+		"ma": 0,
+		"oA": 1,
+		"oAP": "\/css\/animation.css",
+		"oF": 0,
+		"oS": 0,
+		"uL": 1
+		},
 	"\/css\/articleitem.scss": {
 		"aP": 0,
 		"bl": 0,
@@ -857,6 +870,16 @@
 		"opt": 1,
 		"oT": 1,
 		"q": 100
+		},
+	"\/img\/svg\/envelope.svg": {
+		"ft": 2097152,
+		"miP": 0,
+		"oA": 2,
+		"oAP": "\/img\/svg\/envelope.svg",
+		"oF": 0,
+		"opt": 0,
+		"plM": 3758088159,
+		"prP": 0
 		},
 	"\/img\/vid\/index_hero_vid.mp4": {
 		"cB": 0,

@@ -99,18 +99,33 @@
     .animate__fade {
         animation: fade-in 2s ease-in forwards;
     }
-	.fa-angle-double-down {
-		display:inline-block;
+
+    .arrow-indicating-scroll {
         position: absolute;
-        top: 85%;
-        left: 47%;
+        text-align: center;
+    }
+
+	.fa-angle-double-down {
+		// display:inline-block;
+        //position: absolute;
+        // position: -webkit-sticky;
+        //top: 100px;
+        // left: 47;
 		z-index: 100;
+        fill-opacity: 1;
 		color: $burntorange;
 		font-size: 5rem;
 		text-align: center;
         @include breakpoint(lg) {
             font-size: 6rem;
-            left: 48%;
+            left: 47.5vw;
         }
+
+        &.arrowfixed {
+            // transition: opacity 3s;
+            // fill-opacity: 0;
+            //display: none;
         }
+    }
 }
+
