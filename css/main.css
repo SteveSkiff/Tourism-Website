@@ -1026,7 +1026,8 @@ body {
 
 .hamburger {
   margin-top: .5%;
-  padding: 60px 60px; }
+  padding: 60px 60px;
+  outline: none; }
   @media (min-width: 1200px) {
     .hamburger {
       padding: 15px 15px; } }
@@ -1841,7 +1842,7 @@ body {
       width: 40%; } }
   .contactus-questions {
     color: #121A2C;
-    font-size: 2.5rem; }
+    font-size: 2rem; }
     @media (min-width: 1200px) {
       .contactus-questions {
         font-size: 1.5rem; } }

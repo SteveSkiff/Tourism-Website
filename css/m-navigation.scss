@@ -157,6 +157,7 @@ body {
 .hamburger {
   margin-top: .5%;
   padding: 60px 60px;
+  outline: none;
   @include breakpoint(lg) {
     padding:15px 15px;
   }
